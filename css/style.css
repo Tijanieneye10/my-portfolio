@@ -51,8 +51,21 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  /* bottom: 0; */
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+@supports (-webkit-backdrop-filter: blur(3rem)) or (backdrop-filter: blur(3rem)) {
+  .section-header {
+    background-color: rgba(27, 31, 36, 0.8);
+    -webkit-backdrop-filter: blur(5rem);
+    backdrop-filter: blur(5rem);
+  }
+
+  .navbar {
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+  }
 }
 
 .header {
@@ -83,7 +96,7 @@ html {
 .nav__link {
   text-decoration: none;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2rem;
   transition: all 0.3s;
 }
 
@@ -94,7 +107,7 @@ html {
 .nav:hover .nav__item:not(:hover) .nav__link {
   color: #555;
 }
-.resume {
+.button {
   padding: 0.6rem 1.6rem;
   border-radius: 1rem;
   background-color: var(--color-secondary);
@@ -286,10 +299,11 @@ html {
 
 .icon:hover {
   transform: scale(1.1);
+  background-color: #1b1f24;
 }
 
 .icon-lists:hover .icon:not(:hover) {
-  background-color: #1b1f24;
+  background-color: #075fe4;
 }
 
 .portfolio-grid {
@@ -364,21 +378,22 @@ html {
 }
 
 .btn {
-  width: 50%;
-  font-size: 1.2rem;
+  display: inline-block;
+  font-size: 1.6rem;
   margin: 0 auto;
   background-color: var(--color-secondary);
   text-decoration: none;
   color: #fff;
   border: none;
-  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
   font-weight: 700;
   transition: all 0.3s;
   box-shadow: 0 1.5rem 4rem rgba(27, 31, 36, 0.7);
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 .section-portfolio {
@@ -514,11 +529,12 @@ html {
   background-color: var(--color-secondary);
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
 }
 
 .btn-button:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 label {
@@ -621,8 +637,8 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   background-color: var(--color-secondary);
   position: fixed;
@@ -634,7 +650,7 @@ label {
 }
 
 .scroll-icon {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   font-weight: 700;
   animation: continuesUpandDown 5s;
   animation-iteration-count: infinite;
