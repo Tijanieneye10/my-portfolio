@@ -564,8 +564,25 @@ label {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 1.2rem;
+  transition: all 0.3s;
+}
+
+@media (hover: hover) {
+  .testimonial:hover {
+    scale: 1.1;
+  }
+
+  .testimonials-grid:hover .testimonial:not(:hover) {
+    scale: 0.95;
+  }
 }
 
 .testimonial__comment {
@@ -601,7 +618,7 @@ label {
 }
 
 .testimonial__icon {
-  font-size: 2.4rem;
+  font-size: 3rem;
   position: absolute;
   top: 50%;
   left: 50%;

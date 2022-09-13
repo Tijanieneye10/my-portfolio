@@ -110,10 +110,6 @@
   .section-testimonials {
     background-image: url(../img//testimonial-2.svg);
   }
-
-  .testimonials-grid {
-    gap: 5rem;
-  }
 }
 
 @media (max-width: 40em) {
@@ -133,11 +129,9 @@
     border-width: 0.8rem;
     border-style: solid;
     border-color: solid #fff;
-    padding: 1.2rem;
+    padding: 0.9rem;
     border-radius: 50%;
-    animation: changeBorderColor;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation: moveInFromLeft 2s, changeBorderColor 5s infinite;
   }
 
   .about-grid {
