@@ -30,13 +30,11 @@ const observer = new IntersectionObserver(function(entries){
 
        scrollToTop.style.opacity = 1
        scrollToTop.style.visibility = "visible"
-       console.log('show')
     } 
 
     if(ent.isIntersecting){
         scrollToTop.style.opacity = 0
         scrollToTop.style.visibility = "hidden"
-        console.log('hide')
     }
 
 }, options)
