@@ -24,7 +24,7 @@ JV%hileGfbEJ
 
 body {
   /* font-family: "League Spartan", sans-serif; */
-  font-family: "Manrope", sans-serif;
+  font-family: "Fira sans", sans-serif;
   background-color: #1b1f24;
   color: #fff;
   overflow-x: hidden;
@@ -66,6 +66,7 @@ html {
     -webkit-backdrop-filter: blur(2rem);
     backdrop-filter: blur(2rem);
   }
+
 }
 
 .header {
@@ -181,6 +182,7 @@ html {
   font-size: 1.8rem;
   letter-spacing: 1.5;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 .stroke-thin {
@@ -536,7 +538,7 @@ html {
 
 .input::placeholder {
   color: rgb(186, 185, 185);
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
 .input:focus {
@@ -557,7 +559,7 @@ html {
 
 .message::placeholder {
   color: rgb(186, 185, 185);
-  padding-left: 1.5rem;
+  padding-left: 1rem;
 }
 
 .input:focus:invalid {
